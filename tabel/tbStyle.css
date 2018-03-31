@@ -1,0 +1,26 @@
+table {
+    font-family: century gothic;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+table#t01 th {
+	color: #fff;
+	background-color: rgba(0,0,0,0.8);
+}
+body h2{
+	font-family: century gothic;
+	float: left;
+	color: rgba(0,0,0,0.7);
+	text-transform: uppercase;
+
+}
