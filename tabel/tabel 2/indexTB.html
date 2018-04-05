@@ -1,7 +1,12 @@
 <html>
 <head>
 <style>
-  table {
+body {
+    font-family: century gothic;
+    margin: 0;
+    padding: 0;
+}
+table {
     font-family: century gothic;
     border-collapse: collapse;
     width: 100%;
@@ -13,25 +18,94 @@ td, th {
     padding: 8px;
 }
 
-tr:nth-child(even) {
-    background-color: #dddddd;
-}
 table#t01 th {
   color: #fff;
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0,0,0,1);
 }
 body h2{
   font-family: century gothic;
-  float: left;
   color: rgba(0,0,0,0.7);
   text-transform: uppercase;
 
 }
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  padding: 10px 100px;
+  box-sizing: border-box;
+  background: rgba(0,0,0,0.8);
+}
+
+nav .logo {
+  padding: 22px 20px;
+  height: 80px;
+  float: left;
+  font-size: 24px;
+  color: #fff;
+}
+
+nav ul{
+  list-style: none;
+  float: right;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  list-style: none;
+}
+nav ul li a {
+  line-height: 80px;
+  color: #fff;
+  padding: 12px 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+nav ul li .active {
+  background: #E2472F;
+  color: #fff;
+  border-radius: 6px;
+}
+section.sec1{
+  width: 100%;
+  height: 100vh;
+  background: url(Banner1.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+.content {
+  margin-top: 50px;
+  padding-bottom: 50px;
+}
+#footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  color: #fff;
+  padding: 10px 80px;
+  box-sizing: border-box;
+  background: rgba(0,0,0,0.9);
+}
 </style>
 </head>
 <body>
-
-<h2>comparison</h2>
+<nav>
+      <div class ="logo">WITCH</div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Portofolio</a></li>
+        <li><a class="active" href="#">Contact</a></li>
+      </ul>
+</nav>
+<section class="sec1"></section>
+<section class="content">
+<h2><center>macbook comparison</center></h2>
 
 <table style="width:100%" id="t01">
   <tr>
@@ -41,8 +115,8 @@ body h2{
   </tr>
   <tr>
     <td></td>
-    <td><img src="macair.jpeg"></td>
-    <td></td>
+    <td><img src="macair.jpg"></td>
+    <td><img src="macpro.jpg"></td>
   </tr>
   <tr>
     <td>Display</td>
@@ -52,7 +126,7 @@ body h2{
    <tr>
     <td>Processore</td>
     <td>Prosesor Intel Core i5 dual-core 1,8 Ghz
-Turbo Boost hingga 2,9 GHz</td>
+        Turbo Boost hingga 2,9 GHz</td>
     <td>waca@witchesspell.com</td>
   </tr>
    <tr>
@@ -61,15 +135,22 @@ Turbo Boost hingga 2,9 GHz</td>
     <td>waca@witchesspell.com</td>
   </tr>
    <tr>
-    <td>Storage</td>
+    <td rowspan="2">Storage 
+   <br> & Ram</td>
     <td>SSD 128 GB atau 256 GB2</td>
-    <td>waca@witchesspell.com</td>
+    <td>SSD 128 GB atau 256 GB2</td>
+  </tr>
+  <tr>
+    <td>16 GB</td>
+    <td>32 GB</td>
   </tr>
    <tr>
     <td>Trackpad</td>
-    <td>Trackpad Multi-Touch</td>
-    <td>waca@witchesspell.com</td>
+    <td colspan="2"><center>Trackpad Multi-Touch</center></td>
   </tr>
 </table>
+</section>
+<div id="footer"><center>Copyright &copy; 2018
+      Designed by Ali Utomo</center></div>
 </body>
 </html>
