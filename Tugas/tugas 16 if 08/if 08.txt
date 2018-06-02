@@ -1,0 +1,3 @@
+Gunakan AngularJS untuk mengakses file JSON di url berikut ini: https://api.myjson.com/bins/1ecdlq
+--
+Tampilkan hasilnya dalam bentuk tabel seperti pada attachment dibawah ini, referensi bisa anda pelajari w3schools dialamat berikut: https://www.w3schools.com/angular/angular_tables.asp

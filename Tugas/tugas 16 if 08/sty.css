@@ -1,0 +1,21 @@
+.header {
+	font-family: century gothic;
+	background-color: rgba(0,0,0,0.8);
+	color: #fff;
+	height: 90px;
+}
+.menu {
+	font-family: century gothic;
+	height: 40px;
+	background-color: rgba(0,0,0,0.7);
+	color: #fff;
+	text-transform: uppercase;
+	box-shadow: 0px 0px 2px #000;
+}
+.content{
+	background-color: #fff;
+	font-family: century gothic;
+}
+td{
+	padding: 0 10px;
+}

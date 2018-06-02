@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>angular js</title>
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<style type="text/css">
+			.header {
+	font-family: century gothic;
+	background-color: rgba(0,0,0,0.8);
+	color: #fff;
+	height: 90px;
+}
+.menu {
+	font-family: century gothic;
+	height: 40px;
+	background-color: rgba(0,0,0,0.7);
+	color: #fff;
+	text-transform: uppercase;
+	box-shadow: 0px 0px 2px #000;
+}
+.content{
+	background-color: #fff;
+	font-family: century gothic;
+}
+td{
+	padding: 0 10px;
+}
+h1{
+	padding: 10px;
+}
+	</style>
+}
+
+</head>
+<body>
+
+		<div ng-app="myApp"class="container-fluid">
+			<div class="row header">
+				<div class="col-12">
+					<h1>WITCH</h1>
+
+				</div>
+			</div>
+			<div class="row menu">
+				<div class="col-12 text-right" >
+					<a href="#/!">home::</a>
+					<a href="#!data">data::</a>
+					<a href="#!product">product::</a>
+					<a href="#!contact">contact</a>
+				</div>
+			</div>
+
+		<h1>Data</h1>
+
+		<div ng-app="myApp" ng-controller="customersCtrl"> 
+
+	<table>
+	<tr> 
+	<td>name</td>
+	<td>address</td>
+	<td>phone</td>
+	<td>email</td>
+	</tr>
+  		<tr ng-repeat="x in info">
+    		<td>{{ x.first_name }} {{ x.last_name }}</td>
+    		<td>{{ x.address }}</td>
+    		<td>{{ x.phone }}</td>
+    		<td>{{ x.email }}</td>
+  		</tr>
+	</table>
+
+	</div>
+
+	<script>
+	var app = angular.module('myApp', []);
+	app.controller('customersCtrl', function($scope, $http) { var url='https://api.myjson.com/bins/1ecdlq';
+    $http.get(url)
+    .then(function (response) {$scope.info = response.data.data;});
+	});
+	</script>
+			<ng-view></ng-view>
+		</div>
+</body>
+</html>
